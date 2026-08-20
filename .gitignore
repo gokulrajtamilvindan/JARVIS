@@ -1,0 +1,21 @@
+# IntelliJ IDEA
+.idea/
+
+# Java / Maven
+target/
+*.class
+
+# Node.js
+node_modules/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
