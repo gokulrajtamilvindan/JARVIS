@@ -112,3 +112,22 @@ The detailed and current environment state should be maintained here as the proj
 ## Decision Log
 
 Important architectural decisions and their reasoning should be recorded in this document as the project develops.
+
+## Initial Architecture
+
+Jarvis is the personal AI agent. Ollama is the initial local AI runtime and is not the agent itself.
+
+The initial backend architecture is organized around these responsibilities:
+
+- Agent Core
+- AI Provider
+- Memory
+- Tools
+
+Initial conceptual flow:
+
+User → Jarvis → Agent Core → AI Provider → Ollama → Local LLM
+
+The architecture must allow the underlying AI model or provider to be replaced without rewriting the rest of Jarvis.
+
+The currently installed llama3.2:3b model is a temporary development model and is not considered the final Jarvis model.
